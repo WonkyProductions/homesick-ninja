@@ -1,0 +1,255 @@
+[gd_scene load_steps=10 format=3 uid="uid://dqygdynykxcm6"]
+
+[ext_resource type="FontFile" uid="uid://dvb22qrytkpm1" path="res://assets/fonts/8-bit Arcade In.ttf" id="1_0ixo7"]
+[ext_resource type="Script" path="res://scenes/stats.gd" id="1_krmab"]
+[ext_resource type="Script" path="res://scripts/hover.gd" id="2_ul7ir"]
+[ext_resource type="Texture2D" uid="uid://cbq15cuq28els" path="res://assets/pixelart/menubutton .png" id="3_7aar3"]
+[ext_resource type="Texture2D" uid="uid://c0b72niv6d45a" path="res://assets/pixelart/menubuttonpressed.png" id="4_0imh2"]
+[ext_resource type="Script" path="res://scenes/2222.gd" id="6_q6exw"]
+[ext_resource type="Script" path="res://scenes/slide_in_22.gd" id="7_pe3xg"]
+
+[sub_resource type="FontVariation" id="FontVariation_pny0c"]
+base_font = ExtResource("1_0ixo7")
+
+[sub_resource type="FontVariation" id="FontVariation_mwygt"]
+base_font = ExtResource("1_0ixo7")
+
+[node name="stats" type="Node2D"]
+script = ExtResource("1_krmab")
+
+[node name="playText" type="Label" parent="."]
+offset_left = 127.0
+offset_top = 526.0
+offset_right = 251.0
+offset_bottom = 559.0
+scale = Vector2(1.68, 1.68)
+pivot_offset = Vector2(62.56, 20.29)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_pny0c")
+theme_override_font_sizes/font_size = 48
+text = "menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_ul7ir")
+
+[node name="menu" type="TextureButton" parent="playText"]
+layout_mode = 0
+offset_left = -7.99997
+offset_top = -1.99997
+offset_right = 24.0
+offset_bottom = 12.0
+scale = Vector2(4.245, 4.245)
+size_flags_stretch_ratio = 0.0
+texture_normal = ExtResource("3_7aar3")
+texture_pressed = ExtResource("4_0imh2")
+texture_hover = ExtResource("3_7aar3")
+texture_disabled = ExtResource("3_7aar3")
+
+[node name="playText2" type="Label" parent="."]
+offset_left = 375.0
+offset_top = 526.0
+offset_right = 499.0
+offset_bottom = 559.0
+scale = Vector2(1.68, 1.68)
+pivot_offset = Vector2(62.56, 20.29)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_pny0c")
+theme_override_font_sizes/font_size = 48
+text = "retry"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_ul7ir")
+
+[node name="retry" type="TextureButton" parent="playText2"]
+layout_mode = 0
+offset_left = -7.99997
+offset_top = -1.99997
+offset_right = 24.0
+offset_bottom = 12.0
+scale = Vector2(4.245, 4.245)
+size_flags_stretch_ratio = 0.0
+texture_normal = ExtResource("3_7aar3")
+texture_pressed = ExtResource("4_0imh2")
+texture_hover = ExtResource("3_7aar3")
+texture_disabled = ExtResource("3_7aar3")
+
+[node name="STATS" type="Label" parent="."]
+offset_left = -1.0
+offset_top = -6.0
+offset_right = 312.0
+offset_bottom = 26.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_mwygt")
+theme_override_font_sizes/font_size = 48
+text = "stats"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="slideIn" type="ColorRect" parent="."]
+z_index = 645
+offset_left = -7.0
+offset_top = -25.0
+offset_right = 645.0
+offset_bottom = 698.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("6_q6exw")
+slide = true
+
+[node name="slideIn2" type="ColorRect" parent="slideIn"]
+layout_mode = 0
+offset_left = -16.0
+offset_right = 89.0
+offset_bottom = 723.0
+color = Color(0, 0, 0, 1)
+
+[node name="slideIn2" type="ColorRect" parent="."]
+z_index = 645
+offset_left = 665.0
+offset_top = -25.0
+offset_right = 1317.0
+offset_bottom = 698.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("7_pe3xg")
+
+[node name="slideIn2" type="ColorRect" parent="slideIn2"]
+layout_mode = 0
+offset_left = -16.0
+offset_right = 89.0
+offset_bottom = 723.0
+color = Color(0, 0, 0, 1)
+
+[node name="statsText" type="Node2D" parent="."]
+position = Vector2(0, -59)
+scale = Vector2(1.25, 1.25)
+
+[node name="time" type="Label" parent="statsText"]
+offset_left = -122.0
+offset_top = 141.0
+offset_right = 191.0
+offset_bottom = 173.0
+scale = Vector2(1.385, 1.385)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_mwygt")
+theme_override_font_sizes/font_size = 48
+text = "time"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="deaths" type="Label" parent="statsText"]
+offset_left = -79.0
+offset_top = 236.0
+offset_right = 232.0
+offset_bottom = 268.0
+scale = Vector2(1.385, 1.385)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_mwygt")
+theme_override_font_sizes/font_size = 48
+text = "deaths"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="timeNumber" type="Label" parent="statsText"]
+offset_left = 199.0
+offset_top = 141.0
+offset_right = 474.0
+offset_bottom = 173.0
+scale = Vector2(1.385, 1.385)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_mwygt")
+theme_override_font_sizes/font_size = 48
+text = "503"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="deathsNumber" type="Label" parent="statsText"]
+offset_left = 278.0
+offset_top = 235.0
+offset_right = 426.0
+offset_bottom = 267.0
+scale = Vector2(1.385, 1.385)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_mwygt")
+theme_override_font_sizes/font_size = 48
+text = "46"
+vertical_alignment = 1
+
+[node name="bestTimeNumber" type="Label" parent="statsText"]
+offset_left = 350.0
+offset_top = 334.0
+offset_right = 473.0
+offset_bottom = 366.0
+scale = Vector2(1.385, 1.385)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_mwygt")
+theme_override_font_sizes/font_size = 48
+text = "23"
+vertical_alignment = 1
+
+[node name="bestTime" type="Label" parent="statsText"]
+offset_left = -44.0
+offset_top = 335.0
+offset_right = 267.0
+offset_bottom = 367.0
+scale = Vector2(1.385, 1.385)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_mwygt")
+theme_override_font_sizes/font_size = 48
+text = "best time"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="colons" type="Node2D" parent="statsText"]
+
+[node name="ColorRect" type="ColorRect" parent="statsText/colons"]
+offset_left = 153.0
+offset_top = 161.0
+offset_right = 157.0
+offset_bottom = 169.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="statsText/colons"]
+offset_left = 153.0
+offset_top = 173.0
+offset_right = 157.0
+offset_bottom = 181.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="statsText/colons"]
+offset_left = 237.0
+offset_top = 255.0
+offset_right = 241.0
+offset_bottom = 263.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="statsText/colons"]
+offset_left = 237.0
+offset_top = 267.0
+offset_right = 241.0
+offset_bottom = 275.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="statsText/colons"]
+offset_left = 309.0
+offset_top = 355.0
+offset_right = 313.0
+offset_bottom = 363.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="statsText/colons"]
+offset_left = 309.0
+offset_top = 367.0
+offset_right = 313.0
+offset_bottom = 375.0
+color = Color(0, 0, 0, 1)
+
+[connection signal="button_down" from="playText/menu" to="playText" method="_on_play_button_button_down"]
+[connection signal="button_up" from="playText/menu" to="playText" method="_on_play_button_button_up"]
+[connection signal="mouse_entered" from="playText/menu" to="playText" method="_on_play_button_mouse_entered"]
+[connection signal="mouse_exited" from="playText/menu" to="playText" method="_on_play_button_mouse_exited"]
+[connection signal="pressed" from="playText/menu" to="playText" method="_on_menu_pressed"]
+[connection signal="button_down" from="playText2/retry" to="playText2" method="_on_play_button_button_down"]
+[connection signal="button_up" from="playText2/retry" to="playText2" method="_on_play_button_button_up"]
+[connection signal="mouse_entered" from="playText2/retry" to="playText2" method="_on_play_button_mouse_entered"]
+[connection signal="mouse_exited" from="playText2/retry" to="playText2" method="_on_play_button_mouse_exited"]
+[connection signal="pressed" from="playText2/retry" to="playText2" method="_on_retry_pressed"]

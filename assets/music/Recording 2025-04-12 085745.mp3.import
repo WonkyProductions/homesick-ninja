@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bqiow33ofmes6"
+path="res://.godot/imported/Recording 2025-04-12 085745.mp3-2f053671a1c0cd70fd1f941b7d3373be.mp3str"
+
+[deps]
+
+source_file="res://assets/music/Recording 2025-04-12 085745.mp3"
+dest_files=["res://.godot/imported/Recording 2025-04-12 085745.mp3-2f053671a1c0cd70fd1f941b7d3373be.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
